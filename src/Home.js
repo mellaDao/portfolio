@@ -3,8 +3,11 @@ import React from "react";
 function Home() {
   return (
     <section className="home-main-content">
-      <div className="profile-container">
-        <section id="profile-text-container">
+      {/* home page */}
+      <div className="profile-intro-container">
+        {/* profile introduction container */}
+        <section id="profile-intro-text-container">
+          {/* profile introduction container for text*/}
           <h1>Mella Dao</h1>
           <h2>Computer Science Graduate from Algoma University</h2>
           <h3>
@@ -21,21 +24,26 @@ function Home() {
           </h3>
         </section>
 
-        <section id="profile-picture-container">
+        <section id="profile-intro-picture-container">
+          {/* profile introduction container for profile picture*/}
           <img src={require("./images/mella-cropped.jpg")} alt="profile" />
         </section>
       </div>
 
-      <div className="background-picture"></div>
+      <div className="picture-divider">{/* image divider*/}</div>
 
       <div className="about-me-container">
-        <section id="about-box-container">
+        {/* about me section container*/}
+        <section id="about-me-card">
+          {/* about me individual card container*/}
           <section id="about-picture-container">
+            {/* about me image container*/}
             <img
               src={require("./images/algoma-winter-cropped.png")}
               alt="BCOSC card"
             />
           </section>
+          {/* about me text*/}
           <h2>Bachelor of Computer Science</h2>
           <p>
             I studied computer science at Algoma University and graduated in
@@ -43,13 +51,16 @@ function Home() {
           </p>
         </section>
 
-        <section id="about-box-container">
+        <section id="about-me-card">
+          {/* about me individual card container*/}
           <section id="about-picture-container">
+            {/* about me image container*/}
             <img
               src={require("./images/sioc-fractal.png")}
               alt="Comp chem card"
             />
           </section>
+          {/* about me text*/}
           <h2>Experience in Computational Chemistry</h2>
           <p>
             I've previously worked in computational chemistry as an
@@ -58,14 +69,16 @@ function Home() {
           </p>
         </section>
 
-        <section id="about-box-container">
+        <section id="about-me-card">
+          {/* about me individual card container*/}
           <section id="about-picture-container">
+            {/* about me image container*/}
             <img
               src={require("./images/profile-picture.jpg")}
               alt="Fiber artist card"
             />
           </section>
-
+          {/* about me text*/}
           <h2>Fiber artist</h2>
           <p>
             I'm also an avid knitter and crocheter! I love making warm sweaters

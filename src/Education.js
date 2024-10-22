@@ -45,7 +45,7 @@ function Education() {
         <div className="mySlides fade">
           <div className="algoma-background-picture">
             <div className="numbertext">1 / 2</div>
-            <div className="text">
+            <div className="education-text">
               <h2>Algoma University</h2>
               <p>
                 In October 2024, I graduated with a Bachelor of Computer Science
@@ -69,7 +69,7 @@ function Education() {
         <div className="mySlides fade">
           <div className="uta-background-picture">
             <div className="numbertext">2 / 2</div>
-            <div className="text">
+            <div className="education-text">
               <h2>University of Texas at Arlington</h2>
               <p>
                 In December 2021, I obtained a Bachelor of Science in Biological

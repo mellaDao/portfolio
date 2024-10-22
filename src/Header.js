@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <header className="header">
-      {/* navigation links */}
+      {/* header section */}
       <nav>
+        {/* navigation links */}
         <ul>
           <li>
             <Link to="/">Home</Link>

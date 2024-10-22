@@ -3,15 +3,18 @@ import React from "react";
 function Projects() {
   return (
     <section className="projects-main-content">
+      {/* main content of project page*/}
       <section id="project">
+        {/* project card*/}
         <section id="project-image-container">
+          {/* project card image*/}
           <img
             src={require("./images/yarnforge-cropped.png")}
             alt="YarnForge Website"
           />
         </section>
         <section id="project-text">
-          {/* Simple header and paragraph about YarnForge */}
+          {/* project card text */}
           <h3>4th Year Capstone Project | Jan. 2024 - May 2024</h3>
           <h2>Knitting Pattern Generator</h2>
           <p>
@@ -21,6 +24,7 @@ function Projects() {
             Three.js and Blender.
           </p>
           <ul>
+            {/* project card's additional information as list */}
             <li>
               <p>Supervisor: Dr. Mahreen Nasir at Algoma University.</p>
             </li>
@@ -37,15 +41,17 @@ function Projects() {
 
       <section id="divider"></section>
 
-      {/* Simple header and paragraph about the website creator */}
       <section id="project">
+        {/* project card*/}
         <section id="project-image-container">
+          {/* project card image*/}
           <img
             src={require("./images/white-media-player-app.png")}
             alt="Media Player Desktop App"
           />
         </section>
         <section id="project-text">
+          {/* project card text */}
           <h3>Software Engineering Course | Summer 2023</h3>
           <h2>Media Player Desktop App</h2>
           <p>
@@ -53,6 +59,7 @@ function Projects() {
             files in Java and JavaFX.
           </p>
           <ul>
+            {/* project card's additional information as list */}
             <li>
               <p>Designed an intuitive UI for easy navigation and control</p>
             </li>
@@ -70,13 +77,16 @@ function Projects() {
 
       {/* Simple header and paragraph about the website creator */}
       <section id="project">
+        {/* project card*/}
         <section id="project-image-container">
+          {/* project card image*/}
           <img
             src={require("./images/sio2-graphene.gif")}
             alt="SiOC Graphene Sheets"
           />
         </section>
         <section id="project-text">
+          {/* project card text */}
           <h3>
             National Science Foundation-PIRE Research Program | Jan. 2020 – Aug.
             2021
@@ -89,6 +99,7 @@ function Projects() {
             dynamic simulations.
           </p>
           <ul>
+            {/* project card's additional information as list */}
             <li>
               <p>Supervisor: Dr. Peter Kroll at UTA.</p>
             </li>

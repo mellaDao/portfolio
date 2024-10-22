@@ -8,7 +8,6 @@
 @import url('https://db.onlinewebfonts.com/c/38a8e38d23135318aca19fd5cff8e67f?family=Amplitude-Regular');
 
 /* default Theme */
-
 :root {
     --secondary-main-color: rgb(26, 26, 26);
     --accent-color: rgb(50, 98, 255);
@@ -18,6 +17,7 @@
     --description-font-family: "Amplitude-Regular";
 }
 
+/* set primary font family*/
 *{
     font-family: var(--font-family);
 }
@@ -54,32 +54,17 @@ p {
     line-height: 2;
 }
 
+/* different text color for important text*/
 .secondary-text {
     color: var(--link-hover-color)
 }
 
-.secondary-text-dark {
-    color: var(--accent-color)
-}
-
-hr {
-    margin: 30px;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-#body-style1 {
-    background-color: white;
-    margin: 0;
-    padding: 0;
-}
-
+/* custom divider*/
 #divider{
     height: 50px;
 }
 
+/* set styles for the header*/
 header {
     height: 70px;
     display: flex;
@@ -90,10 +75,6 @@ header {
     margin: 0;
     padding: 20px 0px 20px 0px;
     border-bottom: 2px solid white;
-}
-
-nav {
-    background-color: black;
 }
 
 header nav ul {
@@ -114,11 +95,13 @@ header nav a {
     color: white;
 }
 
+/* change link color on hover*/
 header nav a:hover {
     color: var(--link-hover-color);
     transition: color 0.6s ease;
 }
 
+/* add underline on hover*/
 header nav a::after {
     content: '';
     position: absolute;
@@ -133,16 +116,19 @@ header nav a::after {
     margin-top: 30px;
 }
 
+/* expand underline on hover*/
 header nav a:hover::after {
     transform: scaleX(1);
     transform-origin: center;
 }
 
+/* styles for home page*/
 .home-main-content {
     background-color: white;
 }
 
-.profile-container{
+/* styles for profile introduction section*/
+.profile-intro-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,29 +138,30 @@ header nav a:hover::after {
     gap: 20px;
 }
 
-#profile-text-container{
+#profile-intro-text-container{
     margin-right: 100px;
     padding: 50px;
     width: 1000px;
 }
 
-#profile-text-container h3{
+#profile-intro-text-container h3{
     padding-top: 40px;
 }
 
-#profile-picture-container{
+#profile-intro-picture-container{
     padding: 50px;
     justify-content: right;
     align-items: center;
 }
 
-#profile-picture-container img{
+#profile-intro-picture-container img{
     width:400px;
     height:400px;
     border-radius: 50%;
 }
 
-.background-picture{
+/* add a picture to divide different sections*/
+.picture-divider{
     background-image: url("./images/home-background.jpg");
     background-size: cover; 
     background-position: center; 
@@ -185,6 +172,7 @@ header nav a:hover::after {
     margin: 0;
 }
 
+/* about me section*/
 .about-me-container{
     display: flex;
     justify-content: space-between;
@@ -198,24 +186,27 @@ header nav a:hover::after {
     height:450px;
 }
 
-#about-box-container{
+#about-me-card{
     width:450px;
 }
 
-#about-box-container p{
+#about-me-card p{
     padding-top:10px;
     opacity: 90%;
 }
 
+/* ensures images are not stretched*/
 #about-picture-container{
     object-fit: contain;
 }
 
+/* footer container*/
 .footer{
     background-color: var(--secondary-main-color);
     width: 100%;
 }
 
+/* footer top half contains small description, a second nav list, and email*/
 #footer-top-half{
     display: flex;
     justify-content: space-between;
@@ -228,14 +219,17 @@ header nav a:hover::after {
     text-decoration: none;
 }
 
+/* footer top half list*/
 #footer-top-half ul{
     list-style: none;
 }
 
+/* change link color on hover*/
 #footer-top-half ul li a:hover {
     color: var(--link-hover-color); /* Change color on hover */
 }
 
+/* footer bottom half contains additional social links*/
 #footer-bottom-half{
     display: flex;
     justify-content: left;
@@ -243,12 +237,14 @@ header nav a:hover::after {
     padding: 5px 150px 5px 150px;
 }
 
+/* footer bottom half custom fonts */
 #footer-bottom-half p{
     color: white;
     text-decoration: none;
     padding-right: 30px;
 }
 
+/* footer bottom half list*/
 #footer-bottom-half ul {
     list-style-type: none; 
     padding: 0;           
@@ -257,10 +253,7 @@ header nav a:hover::after {
     gap: 15px;           
 }
 
-#footer-bottom-half ul li {
-    display: inline;     
-}
-
+/* footer bottom half links in list*/
 #footer-bottom-half ul li a {
     color: white;        
     text-decoration: none;
@@ -270,52 +263,24 @@ header nav a:hover::after {
     font-size:12px;
 }
 
+/* change link color on hover*/
 #footer-bottom-half ul li a:hover {
     color: var(--link-hover-color); /* Change color on hover */
 }
 
-.general-main-content {
-    background-color: white;
-    color: black;
-    padding: 80px 200px 80px 200px;
-    min-height: 100vh;
-}
-
-.general-main-content ul{
-    list-style-type: square;
-}
-
-#social-container {
-    display: flex;            
-    align-items: left; 
-}
-
-#social-container a{
-    text-decoration: none;
-    color: white;
-}
-
-#social-container .material-icons {
-    margin-right: 8px;        
-    font-size: 36px;          
-}
-
-.email-container {
-    display: block;           
-    margin-top: 4px;
-}
-
+/* styles for projects page*/
 .projects-main-content{
     padding:30px;
 }
 
-
+/* project card*/
 #project{
     display: flex;            
     align-items: left;  
     color: black; 
 }
 
+/* custom fonts for project page*/
 #project h2{
     font-weight: bold;
 }
@@ -324,21 +289,25 @@ header nav a:hover::after {
     color: rgba(0, 0, 0, 0.50);
 }
 
+/* ensure image for project card is not stretched*/
 #project-image-container img{
     width: 500px;
     height: 500px;
     object-fit: contain;
 }
 
+/* project card text*/
 #project-text {
     padding: 25px;
 }
 
-#project-1 ul li::marker, #project-2 ul li::marker {
-    color: white;
-  }
+/* project card list */
+#project ul {
+    list-style-type: square;
+}
 
-  .education-main-content {
+/* styles for education page*/
+.education-main-content {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -346,33 +315,31 @@ header nav a:hover::after {
     min-height: 100vh;
 }
 
+/* education page list*/
 .education-main-content ul{
     list-style-type: square;
 }
 
-/* Slideshow container */
+/* slideshow container */
 .slideshow-container {
     width: 100%;
     height:auto;
     margin: 0;
     padding: 0;
     position: relative;
-  }
+}
 
+/* add background image with a transparent black overlay for each education slide*/
 .uta-background-picture{
     background-image: url("./images/uta.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-    background-blend-mode: overlay;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    height: 750px; 
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .algoma-background-picture{
     background-image: url("./images/algoma.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+
+/* background picture styles for both algoma and uta pictures*/
+.algoma-background-picture, .uta-background-picture {
     background-blend-mode: overlay;
     background-size: cover; 
     background-position: center; 
@@ -383,11 +350,12 @@ header nav a:hover::after {
     margin: 0;
 }
   
-/* Hide the images by default */
+/* hide the images by default */
 .mySlides {
     display: none;
 }
 
+/* position the slideshow arrows*/
 .slideshow-arrows-container{
     position: absolute;
     top: 50%;
@@ -398,7 +366,7 @@ header nav a:hover::after {
     transform: translateY(-50%);
 }
 
-/* Next & previous buttons */
+/* next amd previous buttons */
 .prev, .next {
     cursor: pointer;
     color: white;
@@ -414,19 +382,19 @@ header nav a:hover::after {
     background-color: transparent;
 }
   
-/* Position the "next button" to the right */
+/* position next button to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
   
-/* On hover, add a black background color with a little bit see-through */
+/* on hover, add a transparent black background color*/
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text h2{
+/* title text for education page*/
+.education-text h2{
     color: white;
     font-size: 100px;
     position: absolute;
@@ -436,7 +404,8 @@ header nav a:hover::after {
     font-family: var(--headliner-font-family);
 }
 
-.text p{
+/* caption text for education page*/
+.education-text p{
     color: white;
     font-size: 24px;
     padding: 8px 12px;
@@ -446,6 +415,7 @@ header nav a:hover::after {
     transform: translateX(200%);
     text-align: left;
     font-family: var(--description-font-family);
+    /* add a transparent black text shadow for better readability*/
     text-shadow:
     0.05em 0 rgba(0, 0, 0, 0.082),
     0 0.05em rgba(0, 0, 0, 0.082),
@@ -457,6 +427,7 @@ header nav a:hover::after {
     0.05em 0.05em rgba(0, 0, 0, 0.082);
 }
 
+/* university address text for education page*/
 .address p{
     color: white;
     font-size: 16px;
@@ -468,7 +439,7 @@ header nav a:hover::after {
     font-family: var(--description-font-family);
 }
 
-/* Number text (1/3 etc) */
+/* number text ex. (1/2) */
 .numbertext {
     color: black;
     font-size: 16px;
@@ -478,6 +449,7 @@ header nav a:hover::after {
     align-items: center;
 }
 
+/* dots container*/
 .dots-container{
     display:flex;
     justify-content: center;
@@ -488,7 +460,7 @@ header nav a:hover::after {
     padding: 0;
 }
 
-/* The dots/bullets/indicators */
+/* dots to indicate the current slide */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -500,11 +472,12 @@ header nav a:hover::after {
     transition: background-color 0.6s ease;
 }
 
+/* change dot color on hover*/
 .active, .dot:hover {
     background-color: #717171;
 }
 
-/* Fading animation */
+/* fade animation */
 .fade {
 animation-name: fade;
 animation-duration: 1.5s;
@@ -515,6 +488,7 @@ from {opacity: .4}
 to {opacity: 1}
 }
 
+/* styles for contact page*/
 .contact-main-content {
     background-color: var(--secondary-main-color);
     color: white;
@@ -522,14 +496,34 @@ to {opacity: 1}
     min-height: 100vh;
 }
 
+/* contact list*/
 .contact-main-content ul{
     list-style-type: square;
 }
 
+/* material icons*/
 .material-icons{
+    margin-right: 8px;        
+    font-size: 36px;  
+}
+
+/* contact container*/
+#contact-container {
+    display: flex;            
+    align-items: left; 
+}
+
+/* links in contact container*/
+#contact-container a{
+    text-decoration: none;
     color: white;
 }
 
+/* email container*/
+.email-container {
+    display: block;           
+    margin-top: 4px;
+}
 
 /*font size reduction for mobile and tablet widths */
 @media (max-width: 850px) {
