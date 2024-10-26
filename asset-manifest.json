@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.5e38bd9a.css",
-    "main.js": "/portfolio/static/js/main.6db31dde.js",
+    "main.js": "/portfolio/static/js/main.e452baf9.js",
     "static/js/453.acca0757.chunk.js": "/portfolio/static/js/453.acca0757.chunk.js",
     "static/media/sio2-graphene.gif": "/portfolio/static/media/sio2-graphene.8eaf047cb665ff6a1cf0.gif",
     "static/media/algoma.jpg": "/portfolio/static/media/algoma.9100116669f8191b61ce.jpg",
@@ -20,11 +20,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/portfolio/index.html",
     "main.5e38bd9a.css.map": "/portfolio/static/css/main.5e38bd9a.css.map",
-    "main.6db31dde.js.map": "/portfolio/static/js/main.6db31dde.js.map",
+    "main.e452baf9.js.map": "/portfolio/static/js/main.e452baf9.js.map",
     "453.acca0757.chunk.js.map": "/portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e38bd9a.css",
-    "static/js/main.6db31dde.js"
+    "static/js/main.e452baf9.js"
   ]
 }
