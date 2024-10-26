@@ -1,17 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5e38bd9a.css",
+    "main.css": "/portfolio/static/css/main.6091dfe4.css",
     "main.js": "/portfolio/static/js/main.36b3862a.js",
     "static/js/453.acca0757.chunk.js": "/portfolio/static/js/453.acca0757.chunk.js",
     "static/media/sio2-graphene.gif": "/portfolio/static/media/sio2-graphene.8eaf047cb665ff6a1cf0.gif",
-    "static/media/algoma.jpg": "/portfolio/static/media/algoma.9100116669f8191b61ce.jpg",
     "static/media/yarnforge-cropped.png": "/portfolio/static/media/yarnforge-cropped.d7f79313923967653d0e.png",
     "static/media/algoma-winter-cropped.png": "/portfolio/static/media/algoma-winter-cropped.94ef137a755b46911fbc.png",
-    "static/media/home-background.jpg": "/portfolio/static/media/home-background.05c86d96ad0c52e285fa.jpg",
     "static/media/mella-cropped.jpg": "/portfolio/static/media/mella-cropped.a9b519cf5892891b1494.jpg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/sioc-fractal.png": "/portfolio/static/media/sioc-fractal.6f148e6796d688e1572d.png",
-    "static/media/uta.jpg": "/portfolio/static/media/uta.39974536928fe99698c8.jpg",
     "static/media/fontawesome-webfont.eot": "/portfolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/white-media-player-app.png": "/portfolio/static/media/white-media-player-app.8b2024a266d82824fbb8.png",
@@ -19,12 +16,12 @@
     "static/media/profile-picture.jpg": "/portfolio/static/media/profile-picture.0c79a403d14e9e115a84.jpg",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/portfolio/index.html",
-    "main.5e38bd9a.css.map": "/portfolio/static/css/main.5e38bd9a.css.map",
+    "main.6091dfe4.css.map": "/portfolio/static/css/main.6091dfe4.css.map",
     "main.36b3862a.js.map": "/portfolio/static/js/main.36b3862a.js.map",
     "453.acca0757.chunk.js.map": "/portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e38bd9a.css",
+    "static/css/main.6091dfe4.css",
     "static/js/main.36b3862a.js"
   ]
 }
