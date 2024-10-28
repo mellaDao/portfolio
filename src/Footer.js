@@ -35,14 +35,13 @@ function Footer() {
         <section id="contact-me-container">
           {/* contact information container */}
           <p>Contact me:</p>
-
-          <h2>mella.dao@yahoo.com</h2>
+          <h3>mella.dao@yahoo.com</h3>
         </section>
       </section>
 
       <section id="footer-bottom-half">
         {/* footer bottom half */}
-        <p>Find me on:</p>
+        <p>More links:</p>
         <ul>
           {/* list of additional social links */}
           <li>
@@ -52,6 +51,16 @@ function Footer() {
               rel="noopener noreferrer"
             >
               GitHub
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1ERAX4EMo9KwEaY-VLpHWf-vKPZEdI7be/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
             </a>
           </li>
         </ul>

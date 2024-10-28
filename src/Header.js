@@ -19,6 +19,16 @@ function Header() {
           <li>
             <Link to="/Contact">Contact</Link>
           </li>
+
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1ERAX4EMo9KwEaY-VLpHWf-vKPZEdI7be/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

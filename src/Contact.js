@@ -5,10 +5,9 @@ function Contact() {
     <section className="contact-main-content">
       {/* main content of contact page */}
       <section id="contact-container">
-        {/* container for individual contact card */}
-        <span class="material-icons">mail</span>
         {/* email material icon */}
         <h2>
+          <span class="material-icons">mail</span>
           Email <span class="secondary-text">mella.dao@yahoo.com</span>
           {/* email text */}
         </h2>
@@ -17,13 +16,12 @@ function Contact() {
       <section id="divider"></section>
 
       <section id="contact-container">
-        {/* container for individual contact card */}
-        <span class="material-icons">terminal</span>
         {/* terminal material icon */}
         <h2>
+          <span class="material-icons">terminal</span>
           {/* github text and link*/}
           <a
-            href="https://github.com"
+            href="https://github.com/mellaDao"
             target="_blank"
             rel="noopener noreferrer"
           >
