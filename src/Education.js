@@ -40,7 +40,7 @@ function Education() {
   }
 
   return (
-    <div id="body">
+    <section id="education-main-content">
       <div className="slideshow-container">
         <div className="mySlides fade">
           <div className="algoma-background-picture">
@@ -96,7 +96,7 @@ function Education() {
         <span className="dot" onClick={() => currentSlide(1)}></span>
         <span className="dot" onClick={() => currentSlide(2)}></span>
       </div>
-    </div>
+    </section>
   );
 }
 

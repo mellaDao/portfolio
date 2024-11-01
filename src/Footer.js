@@ -6,7 +6,9 @@ function Footer() {
       {/* footer section */}
       <section id="footer-top-half">
         {/* footer top-half */}
-        <p>An individual aspiring to get started in web development.</p>
+        <p>
+          A coder with dual degrees and a passion for both research and tech.
+        </p>
         {/* footer short personal description */}
         <ul>
           {/* nav list */}
@@ -56,7 +58,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://drive.google.com/file/d/1ERAX4EMo9KwEaY-VLpHWf-vKPZEdI7be/view?usp=sharing"
+              href="https://drive.google.com/file/d/10PrSaO4w0IMLlxkFzKClv6caYJYRDuTT/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

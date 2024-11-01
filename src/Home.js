@@ -36,8 +36,9 @@ function Home() {
             <FadeInSection>
               <section id="caption1">
                 <h3>
-                  I graduated with a Bachelor of Computer Science from Algoma
-                  University and am looking for a job in web development.
+                  I have a Bachelor of Computer Science from Algoma University
+                  and a Bachelor of Science in Biological Chemistry from the
+                  University of Texas at Arlington.
                 </h3>
               </section>
             </FadeInSection>
