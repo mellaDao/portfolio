@@ -37,7 +37,7 @@ function Footer() {
         <section id="contact-me-container">
           {/* contact information container */}
           <p>Contact me:</p>
-          <h3>mella.dao@yahoo.com</h3>
+          <h3>mella.ly.d@gmail.com</h3>
         </section>
       </section>
 
@@ -46,6 +46,15 @@ function Footer() {
         <p>More links:</p>
         <ul>
           {/* list of additional social links */}
+          <li>
+            <a
+              href="https://www.linkedin.com/in/mella-ly-dao/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
           <li>
             <a
               href="https://github.com/mellaDao"
@@ -58,7 +67,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://drive.google.com/file/d/10PrSaO4w0IMLlxkFzKClv6caYJYRDuTT/view?usp=sharing"
+              href="https://drive.google.com/file/d/1dXeei2brM__AHs0BUfKffcJKcqBpMaeu/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

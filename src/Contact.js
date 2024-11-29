@@ -4,16 +4,30 @@ function Contact() {
   return (
     <section className="contact-main-content">
       {/* main content of contact page */}
+
+      <section id="contact-container">
+        {/* terminal material icon */}
+        <h2>
+          <span class="material-icons">person</span>
+          {/* github text and link*/}
+          <a
+            href="https://www.linkedin.com/in/mella-ly-dao/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn <span class="secondary-text">@mella-ly-dao</span>
+          </a>
+        </h2>
+      </section>
+
       <section id="contact-container">
         {/* email material icon */}
         <h2>
           <span class="material-icons">mail</span>
-          Email <span class="secondary-text">mella.dao@yahoo.com</span>
+          Email <span class="secondary-text">mella.ly.d@gmail.com</span>
           {/* email text */}
         </h2>
       </section>
-
-      <section id="divider"></section>
 
       <section id="contact-container">
         {/* terminal material icon */}

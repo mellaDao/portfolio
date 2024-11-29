@@ -40,128 +40,113 @@ function Projects() {
   }
 
   return (
-    <body>
-      <section className="projects-main-content">
-        {/* main content of project page*/}
-        <section id="yarnforge-title">
-          <h1>YarnForge.</h1>
-        </section>
-        <section id="yarnforge-subtitle">
-          <h2>
-            A 3D-Enabled Platform for Personalized Sweater Design and
-            Visualization
-          </h2>
-        </section>
+    <div className="projects-main-content">
+      {/* main content of project page*/}
+      <section id="yarnforge-title">
+        <h1>YarnForge.</h1>
+      </section>
+      <section id="yarnforge-subtitle">
+        <h2>
+          A 3D-Enabled Platform for Personalized Sweater Design and
+          Visualization
+        </h2>
+      </section>
 
-        <div className="scroll-container">
-          <p>
-            <span class="transparent-text-light">Scroll</span>
-          </p>
-          <section id="yarnforge-caption-container">
-            <section id="yarnforge-captions-left">
-              <FadeInSection>
-                <section id="yarnforge-caption1">
-                  <h3>
-                    A website for generating and saving knitting patterns with a
-                    React frontend and Node/Express backend. Integrated a
-                    dynamic 3D model visualization of the garment using Three.js
-                    and Blender.
-                  </h3>
-                </section>
-              </FadeInSection>
-            </section>
-            <div class="vertical-line-light"></div>
+      <div className="scroll-container-light">
+        <p>
+          <span className="transparent-text-light">Scroll</span>
+        </p>
+        <section id="yarnforge-caption-container">
+          <section id="yarnforge-captions-left">
             <FadeInSection>
-              <section id="yarnforge-caption2">
+              <section id="yarnforge-caption1">
                 <h3>
-                  Use of an SQLite database to save user's account information
-                  securely, verify logins, and save knitting patterns.
-                  Integration of SendGrid for email delivery of password reset
-                  tokens.
+                  A website for generating and saving knitting patterns with a
+                  React frontend and Node/Express backend. Integrated a dynamic
+                  3D model visualization of the garment using Three.js and
+                  Blender.
                 </h3>
               </section>
             </FadeInSection>
           </section>
-        </div>
+          <div className="vertical-line-light"></div>
+          <FadeInSection>
+            <section id="yarnforge-caption2">
+              <h3>
+                Use of an SQLite database to save user's account information
+                securely, verify logins, and save knitting patterns. Integration
+                of SendGrid for email delivery of password reset tokens.
+              </h3>
+            </section>
+          </FadeInSection>
+        </section>
+      </div>
 
-        <section id="yarnforge-preview-title">
-          <h1>A Snapshot Preview of My Site</h1>
-        </section>
-        <section id="yarnforge-project-date">
-          <span class="transparent-text-light">
-            <h3>Jan. 2024 - May 2024</h3>
-          </span>
-        </section>
-        <FadeInSection>
-          <div className="yarnforge-slideshow-container">
-            {/* project card image*/}
-            <div className="myYarnForgeSlides fade">
-              <div className="numbertext">1 / 4</div>
-              <img src={require("./images/yarnforge1.png")} alt="profile" />
-            </div>
-            <div className="myYarnForgeSlides fade">
-              <div className="numbertext">2 / 4</div>
-              <img
-                src={require("./images/yarnforge2.png")}
-                alt="YarnForge Website"
-              />
-            </div>
-            <div className="myYarnForgeSlides fade">
-              <div className="numbertext">3 / 4</div>
-              <img
-                src={require("./images/yarnforge3.png")}
-                alt="YarnForge Website"
-              />
-            </div>
-            <div className="myYarnForgeSlides fade">
-              <div className="numbertext">4 / 4</div>
-              <img
-                src={require("./images/yarnforge4.png")}
-                alt="YarnForge Website"
-              />
-            </div>
-            <div className="yarnforge-slideshow-arrows-container">
-              <button className="prev" onClick={() => plusSlides(-1)}>
-                &#10094;
-              </button>
-              <button className="next" onClick={() => plusSlides(1)}>
-                &#10095;
-              </button>
-            </div>
-            <div className="dots-container-light">
-              <span
-                className="dot-light"
-                onClick={() => currentSlide(1)}
-              ></span>
-              <span
-                className="dot-light"
-                onClick={() => currentSlide(2)}
-              ></span>
-              <span
-                className="dot-light"
-                onClick={() => currentSlide(3)}
-              ></span>
-              <span
-                className="dot-light"
-                onClick={() => currentSlide(4)}
-              ></span>
-            </div>
-          </div>
-        </FadeInSection>
-        <section id="yarnforge-source-title">
-          <h1>
-            Source Code for YarnForge Available on my GitHub&nbsp;
-            <a
-              href="https://github.com/mellaDao/yarnforge"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="secondary-text">Here</span>
-            </a>
-          </h1>
-        </section>
-        <section id="divider"></section>
+      <section id="yarnforge-preview-title">
+        <h1>A Snapshot Preview of My Site</h1>
       </section>
+      <section id="yarnforge-project-date">
+        <span className="transparent-text-light">
+          <h3>Jan. 2024 - May 2024</h3>
+        </span>
+      </section>
+      <FadeInSection>
+        <div className="yarnforge-slideshow-container">
+          {/* project card image*/}
+          <div className="myYarnForgeSlides fade">
+            <div className="numbertext">1 / 4</div>
+            <img src={require("./images/yarnforge1.png")} alt="profile" />
+          </div>
+          <div className="myYarnForgeSlides fade">
+            <div className="numbertext">2 / 4</div>
+            <img
+              src={require("./images/yarnforge2.png")}
+              alt="YarnForge Website"
+            />
+          </div>
+          <div className="myYarnForgeSlides fade">
+            <div className="numbertext">3 / 4</div>
+            <img
+              src={require("./images/yarnforge3.png")}
+              alt="YarnForge Website"
+            />
+          </div>
+          <div className="myYarnForgeSlides fade">
+            <div className="numbertext">4 / 4</div>
+            <img
+              src={require("./images/yarnforge4.png")}
+              alt="YarnForge Website"
+            />
+          </div>
+          <div className="yarnforge-slideshow-arrows-container">
+            <button className="prev" onClick={() => plusSlides(-1)}>
+              &#10094;
+            </button>
+            <button className="next" onClick={() => plusSlides(1)}>
+              &#10095;
+            </button>
+          </div>
+          <div className="dots-container-light">
+            <span className="dot-light" onClick={() => currentSlide(1)}></span>
+            <span className="dot-light" onClick={() => currentSlide(2)}></span>
+            <span className="dot-light" onClick={() => currentSlide(3)}></span>
+            <span className="dot-light" onClick={() => currentSlide(4)}></span>
+          </div>
+        </div>
+      </FadeInSection>
+      <section id="yarnforge-source-title">
+        <h1>
+          Source Code for YarnForge Available on my GitHub&nbsp;
+          <a
+            href="https://github.com/mellaDao/yarnforge"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="secondary-text">Here</span>
+          </a>
+        </h1>
+      </section>
+      <section id="divider"></section>
 
       <section id="projects-main-content-light">
         <section id="other-projects-title">
@@ -238,7 +223,7 @@ function Projects() {
           </section>
         </FadeInSection>
       </section>
-    </body>
+    </div>
   );
 }
 
