@@ -14,12 +14,12 @@ function Footer() {
           {/* nav list */}
           <li>
             <h2>
-              <Link to="/">Home</Link>
+              <Link to="/">Data Projects</Link>
             </h2>
           </li>
           <li>
             <h2>
-              <Link to="/Projects">Projects</Link>
+              <Link to="/OtherProjects">Other Projects</Link>
             </h2>
           </li>
           <li>
@@ -62,6 +62,16 @@ function Footer() {
               rel="noopener noreferrer"
             >
               GitHub
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://public.tableau.com/app/profile/mella.ly.dao/vizzes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tableau
             </a>
           </li>
 

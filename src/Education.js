@@ -73,9 +73,8 @@ function Education() {
               <h2>University of Texas at Arlington</h2>
               <p>
                 In December 2021, I obtained a Bachelor of Science in Biological
-                Chemistry with a Minor in Biology. I graduated with a 3.5 GPA,
-                Presidential Scholarship (2018-2021), and was on the Dean's List
-                of the College of Science.
+                Chemistry with a Minor in Biology. I graduated with a 3.5 GPA
+                with a Presidential Scholarship.
               </p>
             </div>
             <div className="address">

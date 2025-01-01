@@ -8,10 +8,10 @@ function Header() {
         {/* navigation links */}
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Data Projects</Link>
           </li>
           <li>
-            <Link to="/Projects">Projects</Link>
+            <Link to="/OtherProjects">Other Projects</Link>
           </li>
           <li>
             <Link to="/Education">Education</Link>

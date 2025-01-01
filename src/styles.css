@@ -187,45 +187,14 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 130vh;
+    height: 55vh;
 }
 
 .vertical-line {
     width: 1px;
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 auto; 
-    height: 120vh;
-}
-
-#caption-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-#caption1, 
-#caption2{
-    max-width: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#caption1 h3, 
-#caption2 h3{
-    text-align: center;
-}
-
-#caption1{
-    margin-bottom: 30vh;
-    margin-left: 20vh;
-}
-
-#caption1 img, #caption2 img {
-    width:40vh;
-    height:40vh;
+    height: 50vh;
 }
 
 #caption2{
@@ -233,7 +202,160 @@ header nav a:hover {
     margin-right: 20vh;
 }
 
-#about-me-title {
+#post-border-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    background: radial-gradient(#e4ae67, #131447);
+}
+
+.post-tabs{
+ background: rgb(110, 110, 110);
+}
+
+.post-tabs button {
+    cursor: pointer;
+    height: 10vh;
+    width: 17vh;
+    padding: 20px;
+    font-size: 1.5em;
+    font-family: var(--description-font-family);
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#post-container-page1{
+    display: grid; /* Use Grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+    padding: 2vh 2vh 2vh 2vh;
+    background-color: white;
+}
+
+.post {
+    text-align: center;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.219);
+    padding: 4vh 4vh 4vh 4vh;
+}
+
+.post p{
+    text-align: center;
+    font-size: 1em;
+}
+
+.post-header {
+    min-height: 10vh;
+    padding-bottom: 1vh;
+}
+
+.post-header h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: var(--title-font-family);
+    padding:0;
+    margin:0;
+}
+
+.post-description {
+    min-height: 3vh;
+    padding-bottom: 0.5vh;
+}
+
+.post button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    height: 6vh;
+    width: 16vh;
+    font-size: 1em;
+    font-family: var(--description-font-family);
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: transparent;
+    margin:1vh 0vh 0vh 0vh;
+}
+
+.post:last-child, .post:nth-last-child(2) {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.post:nth-child(odd) {
+    border-right: 2px solid rgba(128, 128, 128, 0.219);
+}
+
+.image-post img{
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 2vh;
+}
+
+.post-container-featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 15vh 5vh 15vh;
+}
+
+.post-header-featured {
+    min-height: 13vh;
+    padding: 0vh 0vh 5vh 0vh;
+}
+
+.post-header-featured h2{
+    text-align: center;
+    font-size: 6em;
+    font-family: var(--title-font-family);
+    padding:0;
+    margin:0;
+}
+
+.post-header-featured p{
+    text-align: center;
+    font-size: 1.3em;
+    font-family: var(--title-font-family);
+    padding-top: 2vh;
+    margin:0;
+}
+
+.image-post-featured img{
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 2vh;
+}
+
+.post-container-featured button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    height: 8vh;
+    width: 20vh;
+    padding: 20px;
+    font-size: 1.3em;
+    font-family: var(--description-font-family);
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: transparent;
+    margin:2vh 0vh 1vh 0vh;
+}
+
+
+#about-me-title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,33 +366,35 @@ header nav a:hover {
     text-align: center;
     font-size: 7em;
     text-decoration: 1px gray underline;
+    font-family: var(--title-font-family);
 }
 /* about me section*/
 .about-me-container{
     display: flex;
     justify-content: center;
     align-items: top;
-    width:100%;
     padding: 0px 50px 100px 50px;
     gap:10vh;
 }
 
 .about-me-container img{
-    width:40vh;
-    height:40vh;
+    width:100%;
+    height:100%;
 }
 
 #about-me-card{
-    width:40vh;
+    max-width:40vh;
 }
 
 #about-me-card h2{
     color:black;
+    font-family: var(--title-font-family);
 }
 
 #about-me-card p{
     padding-top:10px;
     opacity: 80%;
+    font-family: var(--description-font-family);
 }
 
 /* ensures images are not stretched*/
@@ -685,12 +809,12 @@ header nav a:hover {
     color: white;
     font-size: 24px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 600px;
-    transform: translateX(200%);
-    text-align: left;
+    width: 800px; /* Sets a consistent width */
+    margin: 0 auto; /* Centers the element horizontally */
+    text-align: center; /* Centers the text */
     font-family: var(--description-font-family);
+    padding-top: 60vh;
+
     /* add a transparent black text shadow for better readability*/
     text-shadow:
     0.05em 0 rgba(0, 0, 0, 0.082),
@@ -755,18 +879,18 @@ header nav a:hover {
 
 /* fade animation */
 .fade {
-animation-name: fade;
-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 0.1s;
 }
 
 @keyframes fade {
-from {opacity: .4}
-to {opacity: 1}
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 .myYarnForgeSlides {
     display: none;
-    transition: opacity 1s ease-in-out; /* Adds a smooth transition */
+    transition: opacity 0.5s ease-in-out; /* Adds a smooth transition */
   }
 
 .slowfade {
@@ -810,7 +934,7 @@ to {opacity: 1}
 
 /* In-view state */
 .is-visible {
-    animation: fade 1s 1s both;
+    animation: fade 0.3s 0.3s both;
 }
 
 .not-visible{
@@ -827,9 +951,391 @@ to {opacity: 1}
     }
 }
 
+@media (max-width: 850px){
+
+    header {
+        height: 30vh;
+        display: flex;
+        justify-content: right !important;
+        align-items: center;
+        color: var(--title-text-color);
+        background-color: black;
+        margin: 0;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 2px solid white;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        
+    }
+    
+    header nav li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0vh 5vh 0vh 5vh;
+    }
+    
+    header nav a {
+        color: var(--main-text-color);
+        position: relative;
+        text-decoration: none;
+        color: white;
+        padding: 1.7vh 0vh 1.7vh 0vh;
+    }
+    
+    /* change link color on hover*/
+    header nav a:hover {
+        color: var(--link-hover-color);
+        transition: color 0.6s ease;
+    }
+    
+    .profile-intro-container{
+        flex-direction: column;
+    }
+    
+    #profile-intro-text-container{
+        margin: 0;
+        padding: 30px 5px 5px 5px;
+    }
+    
+    .home-main-content h1, h2, h3{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+   .home-main-content h1{
+        font-size: 5em;
+    }
+
+    .home-main-content h2{
+        font-size: 1.1em;
+    }
+    
+    #profile-intro-picture-container{
+        display: flex;
+        margin: 0px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+
+    #profile-intro-picture-container img{
+        width:30vh;
+        height:30vh;
+        border-radius: 50%;
+    }
+
+    #post-border-container{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    #post-container-page1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:0;
+    }
+
+    .post{
+        padding:3vh 0vh 3vh 0vh;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.219) !important;
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    .post:last-child {
+        border-bottom: none !important; /* Remove border from last item */
+    }
+
+    .post-header {
+        min-height: 5vh;
+        padding-bottom: 0.5vh;
+    }
+    
+    .post-header h2 {
+        text-align: center;
+        font-size: 1.7em;
+    }
+    
+    .post p{
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    .post-description {
+        min-height: 3vh;
+        padding-bottom: 0.5vh;
+    }
+    
+    .post button{
+        height: 4.5vh;
+        width: 13vh;
+        font-size: 0.9em;
+    }
+    
+    .image-post img{
+        max-width: 70%;
+        max-height: 70%;
+        padding-bottom: 0.5vh;
+    }
+    
+    .post-container-featured {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 3vh 4vh 5vh 4vh;
+    }
+    
+    .post-header-featured {
+        min-height: 13vh;
+        padding: 0vh 0vh 1vh 0vh;
+    }
+    
+    .post-header-featured h2{
+        text-align: center;
+        font-size: 2.5em;
+        font-family: var(--title-font-family);
+        padding:0;
+        margin:0;
+    }
+    
+    .post-header-featured p{
+        text-align: center;
+        font-size: 0.8em;
+        font-family: var(--title-font-family);
+        padding-top: 2vh;
+        margin:0;
+    }
+    
+    .image-post-featured img{
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 2vh;
+    }
+    
+    .post-container-featured button{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: black;
+        height: 4vh;
+        width: 13vh;
+        padding: 20px;
+        font-size: 0.9em;
+        font-family: var(--description-font-family);
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        text-decoration: none;
+        border: 2px solid black;
+        background-color: transparent;
+        margin:2vh 0vh 1vh 0vh;
+    }
+
+    #about-me-title h1{
+        font-size: 3em;
+        padding:0px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:0px 0px 80px 0px;
+        gap:0;
+    }
+
+    .about-me-container h2{
+        font-family: var(--title-font-family);
+        font-size: 1.5em;
+        padding: 0px;
+        text-align: center;
+        color: black;
+    }
+
+    .about-me-container p{
+        font-size: 16px;
+        padding: 0px;
+        font-family: var(--description-font-family);
+        text-align: center;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    #about-me-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    /* footer top half contains small description, a second nav list, and email*/
+    #footer-top-half{
+        padding: 10px 15px 40px 15px;
+    }
+
+    #footer-top-half p{
+        font-size: 75%;
+        max-width: 15vh;
+    }
+
+    #footer-top-half h2{
+        font-size: 60%;
+    }
+
+    #footer-top-half h3{
+        font-size: 75%;
+    }
+
+    #footer-top-half ul li a{
+        font-size: 1.9em;
+    }
+
+    /* footer bottom half custom fonts */
+    #footer-bottom-half p{
+        font-size: 85%;
+    }
+
+    /* footer bottom half links in list*/
+    #footer-bottom-half ul li a {
+        font-size: 85%;
+    }
+
+    #yarnforge-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    #yarnforge-title h1{
+        font-size: 80px;
+    }
+
+    /* styles for projects page*/
+    .projects-main-content{
+        padding:0px;
+    }
+
+    /* project card*/
+    #project{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* custom fonts for project page*/
+    #project h2{
+        padding-bottom: 15px;
+        font-size: 24px;
+    }
+
+    #project h3{
+        padding:0;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #project p{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /* project card text*/
+    #project-text {
+        text-align: center;
+        margin-top: 0vh;
+        padding-left: 0vh;
+        width: 100%;
+    }
+
+    /* project card list */
+    #project ul {
+        list-style-type: square;
+    }
+
+    #yarnforge-caption1, #yarnforge-caption2, #yarnforge-caption3{
+        font-size: 85%;
+    }
+
+    #yarnforge-caption1{
+        margin-left: 5vh;
+    }
+    
+    #yarnforge-caption2{
+        margin-right: 5vh;
+    }
+
+    #yarnforge-preview-title{
+        font-size: 75%;
+    }
+
+    #yarnforge-preview-title h1{
+        text-align: center;
+    }
+
+    #yarnforge-project-date{
+        margin-left: 0vh;
+    }
+    
+    #yarnforge-project-date h3{
+        font-family: var(--cursive-font-family);
+        font-size: 200%;
+        margin-left: 0vh;
+    }
+
+    #other-projects-title h1{
+        text-align: center;
+    }
+
+    #project{        
+        align-items: center;  
+        padding: 0px 50px 0px 50px;
+    }
+
+    #project-text {
+        margin-top: 0vh;
+        padding-left: 0vh;
+    }
+
+    #project-text p{
+        font-size: 0.9em;
+    }
+
+    .yarnforge-slideshow-container{
+        width: 100%;
+    }
+
+    .education-text h2{
+        font-size: 70px;
+        padding-top: 50px;
+    }
+
+    /* caption text for education page*/
+    .education-text p,
+    .address p {
+        width: 400px;
+        width: auto; 
+        text-align: center; 
+        font-size: 12px;
+    }
+
+    .education-text p{
+        padding-bottom: 80px;
+        font-size: 20px;
+    }
+}
+
 
 /*layout changes for mobile widths (850px) */
-@media (max-width: 850px), (max-width: 1100px) {
+@media (min-width: 850px) and (max-width: 1100px) {
 
     header {
         flex-direction: row;
@@ -880,18 +1386,73 @@ to {opacity: 1}
         border-radius: 50%;
     }
 
-    #caption1, 
-    #caption2{
-        font-size: 85%;
-    }
-
-    #caption1{
-        margin-left: 5vh;
+    #post-border-container{
+        padding-left: 10%;
+        padding-right: 10%;
     }
     
-    #caption2{
-        margin-right: 5vh;
+    #post-container-page1{
+        padding: 1vh 2vh 1vh 2vh;
     }
+    
+    .post {
+        text-align: center;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.219);
+        padding: 2vh 4vh 2vh 4vh;
+    }
+    
+    .post p{
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .post-header {
+        min-height: 10vh;
+        padding-bottom: 1vh;
+    }
+    
+    .post-header h2 {
+        font-size: 2em;
+    }
+    
+    .post-description {
+        min-height: 8vh;
+    }
+    
+    .post button, .post-container-featured button{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        width: 13vh;
+        font-size: 0.9em;
+    }
+    
+    .image-post img{
+        padding-bottom: 0.5vh;
+    }
+    
+    .post-container-featured {
+        padding: 2vh 10vh 2vh 10vh;
+    }
+    
+    .post-header-featured {
+        min-height: 13vh;
+    }
+    
+    .post-header-featured h2{
+        font-size: 4em;
+    }
+    
+    .post-header-featured p{
+        font-size: 1em;
+    }
+    
+    .image-post-featured img{
+        max-width: 100%;
+        max-height: 100%;
+        padding-bottom: 2vh;
+    }  
 
     #about-me-title h1{
         font-size: 65px;
@@ -915,7 +1476,7 @@ to {opacity: 1}
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding:0px 0px 80px 0px;
+        padding:80px 0px 80px 0px;
         gap:0;
     }
 
@@ -1086,11 +1647,9 @@ to {opacity: 1}
     /* caption text for education page*/
     .education-text p,
     .address p {
-        min-width: 400px;
+        width: 400px;
         width: auto; 
         text-align: center; 
-        left: 50%; 
-        transform: translateX(-50%); 
         font-size: 12px;
     }
 

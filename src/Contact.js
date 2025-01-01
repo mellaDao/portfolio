@@ -43,6 +43,21 @@ function Contact() {
           </a>
         </h2>
       </section>
+
+      <section id="contact-container">
+        {/* terminal material icon */}
+        <h2>
+          <span class="material-icons">terminal</span>
+          {/* github text and link*/}
+          <a
+            href="https://public.tableau.com/app/profile/mella.ly.dao/vizzes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tableau <span class="secondary-text">@mella.ly.dao</span>
+          </a>
+        </h2>
+      </section>
     </section>
   );
 }

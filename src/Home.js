@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FadeInSection } from "./FadeInSection";
 
 function Home() {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  const openPostTab = (tabIndex) => {
+    setActiveTabIndex(tabIndex);
+  };
+
   return (
     <div className="home-main-content">
       {/* home page */}{" "}
@@ -31,45 +37,194 @@ function Home() {
         <p>
           <span className="transparent-text">Scroll</span>
         </p>
-        <section id="caption-container">
-          <FadeInSection>
-            <section id="caption1">
-              <h3>
-                I lived in the states for the majority of my life where I
-                studied biochemistry and worked in computational chemistry.
-              </h3>
-              <img
-                src={require("./images/american-flag.png")}
-                alt="American Flag"
-              />
-              <p>
-                <span className="transparent-text">
-                  Photo Source: showallegiance.com
-                </span>
-              </p>
-            </section>
-          </FadeInSection>
-          <div className="vertical-line"></div>
-          <FadeInSection>
-            <section id="caption2">
-              <h3>
-                I moved to Canada to be with my husband and went back to school
-                for computer science because I loved working with computers.
-              </h3>
-              <img
-                src={require("./images/canadian_flag.jpg")}
-                alt="Canadian Flag"
-              />
-              <p>
-                <span className="transparent-text">
-                  Photo Source: Standards Council of Canada
-                </span>
-              </p>
-            </section>
-          </FadeInSection>
-        </section>
+        <div className="vertical-line"></div>
       </div>
-      <section id="picture-divider">{/* image divider*/}</section>
+      <FadeInSection>
+        <div class="post-container-featured">
+          <section className="post-header-featured">
+            <h2>Data Cleaning with Python</h2>
+            <p>
+              <span className="transparent-text">
+                In this project, we take raw Airbnb data for Toronto in November
+                and December
+                <br />
+                and transform it with Python to make it more usable for
+                visualization in Tableau.
+              </span>
+            </p>
+          </section>
+          <a
+            href="https://github.com/mellaDao/PortfolioProjects/blob/main/TorontoAirbnbs-Project6/airbnbs.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="image-post-featured">
+              <img src={require("./images/toronto.png")} alt="BCOSC card" />
+            </div>
+          </a>
+          <a
+            href="https://github.com/mellaDao/PortfolioProjects/blob/main/TorontoAirbnbs-Project6/airbnbs.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>View Project</button>
+          </a>
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+        <div id="post-border-container">
+          <div className="post-tabs">
+            <button
+              class="post-tablinks default-tab active"
+              onClick={() => openPostTab(0)}
+              style={{
+                backgroundColor: activeTabIndex === 0 ? "white" : "transparent",
+                color: activeTabIndex === 0 ? "black" : "white",
+              }}
+            >
+              Page 1
+            </button>
+            {/*
+            <button
+              className="post-tablinks"
+              onClick={() => openPostTab(1)}
+              style={{
+                backgroundColor: activeTabIndex === 1 ? "white" : "transparent",
+                color: activeTabIndex === 1 ? "black" : "white",
+              }}
+            >
+              Page 2
+            </button>
+            */}
+          </div>
+          <div
+            id="post-container-page1"
+            style={{
+              display: activeTabIndex === 0 ? "" : "none",
+            }}
+          >
+            <section className="post">
+              <section className="post-header">
+                <h2>Covid 19 Data Exploration</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img src={require("./images/covid.jpg")} alt="BCOSC card" />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Exploring global COVID 19 data with SQL Server
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+            <section className="post">
+              <section className="post-header">
+                <h2>Tableau Dashboard</h2>
+              </section>
+              <a
+                href="https://public.tableau.com/app/profile/mella.ly.dao/vizzes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img src={require("./images/tableau.jpg")} alt="BCOSC card" />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Tableau Dashboards for projects on COVID 19 and Toronto
+                    Airbnbs
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://public.tableau.com/app/profile/mella.ly.dao/vizzes"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+
+            <section className="post">
+              <section className="post-header">
+                <h2>Movie Correlation with Python</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Movies-Project4/movies.ipynb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img src={require("./images/movies.png")} alt="BCOSC card" />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    In this project, we look at what variables effect the gross
+                    revenue from movies
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Movies-Project4/movies.ipynb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+            <section className="post">
+              <section className="post-header">
+                <h2>Nashville Housing</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img
+                    src={require("./images/nashville.jpg")}
+                    alt="BCOSC card"
+                  />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Transforming raw housing data in SQL Server to make it more
+                    usable for analysis
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+          </div>
+        </div>
+      </FadeInSection>
       <section id="about-me-title">
         <h1>A little bit more about me</h1>
       </section>

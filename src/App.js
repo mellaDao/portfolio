@@ -1,7 +1,7 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
-import Projects from "./Projects";
+import OtherProjects from "./Projects";
 import Education from "./Education";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -13,7 +13,7 @@ function App() {
     <HashRouter>
       {<Header />}
       <Routes>
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/otherprojects" element={<OtherProjects />} />
         <Route path="/education" element={<Education />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/" element={<Home />} />
