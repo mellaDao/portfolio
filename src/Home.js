@@ -84,7 +84,6 @@ function Home() {
             >
               Page 1
             </button>
-            {/*
             <button
               className="post-tablinks"
               onClick={() => openPostTab(1)}
@@ -95,7 +94,6 @@ function Home() {
             >
               Page 2
             </button>
-            */}
           </div>
           <div
             id="post-container-page1"
@@ -103,6 +101,39 @@ function Home() {
               display: activeTabIndex === 0 ? "" : "none",
             }}
           >
+            <section className="post">
+              <section className="post-header">
+                <h2>Credit Card Fraud Detection</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/CreditCardFraud/blob/main/creditcard.ipynb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img
+                    src={require("./images/creditcard.jpg")}
+                    alt="BCOSC card"
+                  />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Credit card fraud detection using kNN algorithm, achieving
+                    improved classification accuracy with SMOTE.
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/CreditCardFraud/blob/main/creditcard.ipynb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+
             <section className="post">
               <section className="post-header">
                 <h2>Covid 19 Data Exploration</h2>
@@ -119,7 +150,8 @@ function Home() {
               <section className="post-description">
                 <p>
                   <span className="transparent-text">
-                    Exploring global COVID 19 data with SQL Server
+                    Exploring global COVID-19 data with SQL Server: infection,
+                    death rates, and vaccination progress.
                   </span>
                 </p>
               </section>
@@ -163,6 +195,46 @@ function Home() {
 
             <section className="post">
               <section className="post-header">
+                <h2>Nashville Housing</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img
+                    src={require("./images/nashville1.jpg")}
+                    alt="BCOSC card"
+                  />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Transforming raw housing data in SQL Server to make it more
+                    usable for analysis
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>View Project</button>
+              </a>
+            </section>
+          </div>
+
+          <div
+            id="post-container-page2"
+            style={{
+              display: activeTabIndex === 1 ? "" : "none",
+            }}
+          >
+            <section className="post">
+              <section className="post-header">
                 <h2>Movie Correlation with Python</h2>
               </section>
               <a
@@ -184,38 +256,6 @@ function Home() {
               </section>
               <a
                 href="https://github.com/mellaDao/PortfolioProjects/blob/main/Movies-Project4/movies.ipynb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button>View Project</button>
-              </a>
-            </section>
-            <section className="post">
-              <section className="post-header">
-                <h2>Nashville Housing</h2>
-              </section>
-              <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="image-post">
-                  <img
-                    src={require("./images/nashville.jpg")}
-                    alt="BCOSC card"
-                  />
-                </div>
-              </a>
-              <section className="post-description">
-                <p>
-                  <span className="transparent-text">
-                    Transforming raw housing data in SQL Server to make it more
-                    usable for analysis
-                  </span>
-                </p>
-              </section>
-              <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
                 target="_blank"
                 rel="noopener noreferrer"
               >
