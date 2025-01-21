@@ -49,7 +49,7 @@ function Education() {
               <h2>Algoma University</h2>
               <p>
                 In October 2024, I graduated with a Bachelor of Computer Science
-                at Algoma university with a 88.1 Average.
+                at Algoma university with a 3.84 GPA.
               </p>
             </div>
             <div className="address">
@@ -73,7 +73,7 @@ function Education() {
               <h2>University of Texas at Arlington</h2>
               <p>
                 In December 2021, I obtained a Bachelor of Science in Biological
-                Chemistry with a Minor in Biology. I graduated with a 3.5 GPA
+                Chemistry with a Minor in Biology. I graduated with a 3.48 GPA
                 with a Presidential Scholarship.
               </p>
             </div>

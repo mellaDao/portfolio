@@ -14,12 +14,12 @@ function Footer() {
           {/* nav list */}
           <li>
             <h2>
-              <Link to="/">Data Projects</Link>
+              <Link to="/">Home</Link>
             </h2>
           </li>
           <li>
             <h2>
-              <Link to="/OtherProjects">Other Projects</Link>
+              <Link to="/Work">Work</Link>
             </h2>
           </li>
           <li>
@@ -77,7 +77,7 @@ function Footer() {
 
           <li>
             <a
-              href="https://drive.google.com/file/d/1dXeei2brM__AHs0BUfKffcJKcqBpMaeu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jrsG5q14DX9dhtW1YfgHJ795tBguOJzU/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

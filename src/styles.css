@@ -209,6 +209,82 @@ header nav a:hover {
     background: radial-gradient(#e4ae67, #131447);
 }
 
+#work-border-container{
+    display: flex;
+    flex-direction: column;
+    padding: 12%;
+    background: radial-gradient(#e4ae67, #131447);
+}
+
+#work-container-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:0;
+    background-color: white;
+}
+
+#work-container-page ul{
+    list-style: square !important;
+    padding: 1vh;           
+    margin: 1vh;    
+}
+
+#work-container-page ul li{
+    font-size: 1em;
+    font-family: var(--description-font-family);
+}
+
+.work {
+    text-align: center;
+    padding: 4vh 4vh 4vh 4vh;
+}
+
+.work-header {
+    min-height: 11vh;
+    padding-bottom: 1vh;
+}
+
+.work-header h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: var(--title-font-family);
+    padding:0;
+    margin:0;
+}
+
+.work-header h3 {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: var(--title-font-family);
+    color:rgba(0, 0, 0, 0.6);
+    padding:0;
+    margin:0;
+}
+
+.work-description {
+    min-height: 10vh;
+    padding-bottom: 0.5vh;
+}
+
+.image-work img{
+    max-width: 50%;
+    max-height: 50%;
+    padding-bottom: 2vh;
+}
+
+.image-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+.work-description ul li::marker {
+    color: black !important;
+}
+
 .post-tabs{
  background: rgb(110, 110, 110);
 }
@@ -242,7 +318,7 @@ header nav a:hover {
     padding: 4vh 4vh 4vh 4vh;
 }
 
-.post p{
+#post-container-page1 .post p, #post-container-page2 .post p{
     text-align: center;
     font-size: 1em;
 }
@@ -260,12 +336,21 @@ header nav a:hover {
     margin:0;
 }
 
+.post-header h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: var(--title-font-family);
+    color:rgba(0, 0, 0, 0.6);
+    padding:0;
+    margin:0;
+}
+
 .post-description {
     min-height: 10vh;
     padding-bottom: 0.5vh;
 }
 
-.post button{
+.post .view-project-button{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -506,157 +591,22 @@ header nav a:hover {
     display: none;
 }
 
-.myYarnForgeSlides img {
-    object-fit: scale-down;
-    max-width: 100%;             
-    max-height: 100%; 
-}
-
 .yarnforge-slideshow-container{
-    width: 80%;
+    width: 100%;
     position: relative;
-    margin: 0 auto;
-}
-
-.yarnforge-slideshow-arrows-container{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transform: translateY(-50%);
-    color:white;
-}
-
-#yarnforge-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 200px 0px 20px 0px;
-}
-
-#yarnforge-subtitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 240px;
-}
-
-#yarnforge-subtitle h2{
-    color: rgba(255, 255, 255, 0.425);
-    font-size: 95%;
-}
-
-#yarnforge-preview-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#yarnforge-preview-title h1{
-    font-size: 6em;
-}
-
-.transparent-text-light{
-    color: rgba(255, 255, 255, 0.425);
-}
-
-#yarnforge-project-date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#yarnforge-project-date h3{
-    font-family: var(--cursive-font-family);
-    font-size: 2.5em;
-}
-
-.scroll-container-light{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 170vh;
-}
-
-.vertical-line-light{
-    width: 1px; 
-    background-color: rgba(255, 255, 255, 0.425);
-    margin: 0 auto; 
-    height: 160vh;
-}
-
-#yarnforge-caption-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap:5vh;
-}
-
-#yarnforge-caption-container h3{
-    color:white;
-}
-
-#yarnforge-caption1, 
-#yarnforge-caption2{
-    max-width: 50vh;
-}
-
-#yarnforge-caption1{
-    margin-bottom: 60vh;
-    margin-left: 20vh;
-}
-
-#yarnforge-caption2{
-    margin-top: 60vh;
-    margin-right: 20vh;
-}
-
-#yarnforge-source-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20%;
-    padding-top:10vh;
-    padding-bottom:10vh;
-}
-
-#yarnforge-source-title a{
-    text-decoration: none;
-}
-
-#yarnforge-source-title a .secondary-text{
-    color:var(--link-hover-color);
-    font-family: var(--title-font-family);
-}
-
-.dots-container-light{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    height: 60px;
     margin: 0;
     padding: 0;
 }
 
-/* dots to indicate the current slide */
-.dot-light {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ffffff27;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.myTableauSlides {
+    display: none;
 }
 
-/* change dot color on hover*/
-.active, .dot-light:hover {
-    background-color: #ffffffb9;
+.tableau-slideshow-container{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 #projects-main-content-light{
@@ -860,8 +810,19 @@ header nav a:hover {
     padding: 0;
 }
 
+/* dots container*/
+.dots-container-small{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 30px;
+    margin: 0;
+    padding-bottom: 1.5vh;
+}
+
 /* dots to indicate the current slide */
-.dot {
+.dot1, .dot2 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -873,7 +834,7 @@ header nav a:hover {
 }
 
 /* change dot color on hover*/
-.active, .dot:hover {
+.active, .dot1:hover, .dot2:hover{
     background-color: #717171;
 }
 
@@ -1061,17 +1022,17 @@ header nav a:hover {
         font-size: 1.7em;
     }
     
-    .post p{
+    #post-container-page1 .post p, #post-container-page2 .post p{
         text-align: center;
         font-size: 0.9em;
     }
     
     .post-description {
         min-height: 7vh;
-        margin-left: 2vh;
-        margin-right: 2vh;
+        margin-right: 5vh;
         padding-top: 0.5vh;
         padding-bottom: 0.5vh;
+        padding-left: 5vh;
     }
     
     .post button{
@@ -1211,17 +1172,6 @@ header nav a:hover {
         font-size: 85%;
     }
 
-    #yarnforge-title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 0;
-    }
-
-    #yarnforge-title h1{
-        font-size: 80px;
-    }
-
     /* styles for projects page*/
     .projects-main-content{
         padding:0px;
@@ -1264,36 +1214,6 @@ header nav a:hover {
         list-style-type: square;
     }
 
-    #yarnforge-caption1, #yarnforge-caption2, #yarnforge-caption3{
-        font-size: 85%;
-    }
-
-    #yarnforge-caption1{
-        margin-left: 5vh;
-    }
-    
-    #yarnforge-caption2{
-        margin-right: 5vh;
-    }
-
-    #yarnforge-preview-title{
-        font-size: 75%;
-    }
-
-    #yarnforge-preview-title h1{
-        text-align: center;
-    }
-
-    #yarnforge-project-date{
-        margin-left: 0vh;
-    }
-    
-    #yarnforge-project-date h3{
-        font-family: var(--cursive-font-family);
-        font-size: 200%;
-        margin-left: 0vh;
-    }
-
     #other-projects-title h1{
         text-align: center;
     }
@@ -1310,10 +1230,6 @@ header nav a:hover {
 
     #project-text p{
         font-size: 0.9em;
-    }
-
-    .yarnforge-slideshow-container{
-        width: 100%;
     }
 
     .education-text h2{
@@ -1404,7 +1320,7 @@ header nav a:hover {
         padding: 2vh 4vh 2vh 4vh;
     }
     
-    .post p{
+    #post-container-page1 .post p, #post-container-page2 .post p{
         text-align: center;
         font-size: 0.9em;
     }
@@ -1419,7 +1335,7 @@ header nav a:hover {
     }
     
     .post-description {
-        min-height: 8vh;
+        min-height: 10vh;
     }
     
     .post button, .post-container-featured button{
@@ -1537,17 +1453,6 @@ header nav a:hover {
         font-size: 85%;
     }
 
-    #yarnforge-title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 0;
-    }
-
-    #yarnforge-title h1{
-        font-size: 80px;
-    }
-
     /* styles for projects page*/
     .projects-main-content{
         padding:0px;
@@ -1590,36 +1495,6 @@ header nav a:hover {
         list-style-type: square;
     }
 
-    #yarnforge-caption1, #yarnforge-caption2, #yarnforge-caption3{
-        font-size: 85%;
-    }
-
-    #yarnforge-caption1{
-        margin-left: 5vh;
-    }
-    
-    #yarnforge-caption2{
-        margin-right: 5vh;
-    }
-
-    #yarnforge-preview-title{
-        font-size: 75%;
-    }
-
-    #yarnforge-preview-title h1{
-        text-align: center;
-    }
-
-    #yarnforge-project-date{
-        margin-left: 0vh;
-    }
-    
-    #yarnforge-project-date h3{
-        font-family: var(--cursive-font-family);
-        font-size: 200%;
-        margin-left: 0vh;
-    }
-
     #other-projects-title h1{
         text-align: center;
     }
@@ -1636,10 +1511,6 @@ header nav a:hover {
 
     #project-text p{
         font-size: 0.9em;
-    }
-
-    .yarnforge-slideshow-container{
-        width: 100%;
     }
 
     .education-text h2{

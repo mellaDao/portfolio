@@ -1,8 +1,81 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FadeInSection } from "./FadeInSection";
+import Misc from "./Misc";
 
 function Home() {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  const [yarnforgeSlideIndex, setYarnforgeSlideIndex] = useState(1);
+  const [tableauSlideIndex, setTableauSlideIndex] = useState(1);
+
+  useEffect(() => {
+    function showTableauSlides(n) {
+      let i;
+      let tableauSlides = document.getElementsByClassName("myTableauSlides");
+      let dots = document.getElementsByClassName("dot1");
+      if (n > tableauSlides.length) {
+        setTableauSlideIndex(1);
+      }
+      if (n < 1) {
+        setTableauSlideIndex(tableauSlides.length);
+      }
+      for (i = 0; i < tableauSlides.length; i++) {
+        tableauSlides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      if (tableauSlides[tableauSlideIndex - 1]) {
+        tableauSlides[tableauSlideIndex - 1].style.display = "block";
+      }
+      if (dots[tableauSlideIndex - 1]) {
+        dots[tableauSlideIndex - 1].className += " active";
+      }
+    }
+
+    function showYarnforgeSlides(n) {
+      let i;
+      let yarnforgeSlides =
+        document.getElementsByClassName("myYarnForgeSlides");
+      let dots = document.getElementsByClassName("dot2");
+      if (n > yarnforgeSlides.length) {
+        setYarnforgeSlideIndex(1);
+      }
+      if (n < 1) {
+        setYarnforgeSlideIndex(yarnforgeSlides.length);
+      }
+      for (i = 0; i < yarnforgeSlides.length; i++) {
+        yarnforgeSlides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      if (yarnforgeSlides[yarnforgeSlideIndex - 1]) {
+        yarnforgeSlides[yarnforgeSlideIndex - 1].style.display = "block";
+      }
+      if (dots[yarnforgeSlideIndex - 1]) {
+        dots[yarnforgeSlideIndex - 1].className += " active";
+      }
+    }
+    showTableauSlides(tableauSlideIndex);
+    showYarnforgeSlides(yarnforgeSlideIndex);
+  }, [yarnforgeSlideIndex, tableauSlideIndex]);
+
+  function currentYarnforgeSlide(n) {
+    setYarnforgeSlideIndex(n);
+  }
+
+  function currentTableauSlide(n) {
+    setTableauSlideIndex(n);
+  }
+
+  function plusTableauSlides(n) {
+    setTableauSlideIndex((prevSlideIndex) => prevSlideIndex + n);
+  }
+
+  function plusYarnforgeSlides(n) {
+    setYarnforgeSlideIndex((prevSlideIndex) => prevSlideIndex + n);
+  }
 
   const openPostTab = (tabIndex) => {
     setActiveTabIndex(tabIndex);
@@ -59,7 +132,10 @@ function Home() {
             rel="noopener noreferrer"
           >
             <div className="image-post-featured">
-              <img src={require("./images/toronto.png")} alt="BCOSC card" />
+              <img
+                src={require("./images/toronto.png")}
+                alt="toronto airbnb project"
+              />
             </div>
           </a>
           <a
@@ -113,7 +189,7 @@ function Home() {
                 <div className="image-post">
                   <img
                     src={require("./images/creditcard.jpg")}
-                    alt="BCOSC card"
+                    alt="credit card fraud project"
                   />
                 </div>
               </a>
@@ -130,57 +206,94 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>View Project</button>
+                <button className="view-project-button">View Project</button>
               </a>
             </section>
 
             <section className="post">
               <section className="post-header">
-                <h2>Covid 19 Data Exploration</h2>
+                <h2>Ravelry Web Scraper with Python </h2>
               </section>
-              <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="image-post">
-                  <img src={require("./images/covid.jpg")} alt="BCOSC card" />
-                </div>
-              </a>
+              <div className="image-post">
+                <img
+                  src={require("./images/ravelry.jpg")}
+                  alt="ravelry web scraper project"
+                />
+              </div>
               <section className="post-description">
                 <p>
                   <span className="transparent-text">
-                    Exploring global COVID-19 data with SQL Server: infection,
-                    death rates, and vaccination progress.
+                    Web scraping project that summarizes Ravelry.com reviews and
+                    overall sentiment on a knitting pattern.
                   </span>
                 </p>
               </section>
-              <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button>View Project</button>
-              </a>
+              <button className="view-project-button">In progress</button>
             </section>
             <section className="post">
               <section className="post-header">
                 <h2>Tableau Dashboard</h2>
               </section>
-              <a
-                href="https://public.tableau.com/app/profile/mella.ly.dao/vizzes"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="image-post">
-                  <img src={require("./images/tableau.jpg")} alt="BCOSC card" />
+
+              <div className="image-post">
+                {/* project card image*/}
+                <div className="myTableauSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusTableauSlides(1)}
+                    aria-label="Next Tableau Slide"
+                  >
+                    <img
+                      src={require("./images/tableau.jpg")}
+                      alt="Tableau page 1"
+                    />
+                  </button>
                 </div>
-              </a>
+                <div className="myTableauSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusTableauSlides(1)}
+                    aria-label="Next Tableau Slide"
+                  >
+                    <img
+                      src={require("./images/tableau1.png")}
+                      alt="Tableau page 2"
+                      style={{ cursor: "pointer" }}
+                    />
+                  </button>
+                </div>
+                <div className="myTableauSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusTableauSlides(1)}
+                    aria-label="Next Tableau Slide"
+                  >
+                    <img
+                      src={require("./images/tableau2.png")}
+                      alt="Tableau page 3"
+                    />
+                  </button>
+                </div>
+                <div className="dots-container-small">
+                  <span
+                    className="dot1"
+                    onClick={() => currentTableauSlide(1)}
+                  ></span>
+                  <span
+                    className="dot1"
+                    onClick={() => currentTableauSlide(2)}
+                  ></span>
+                  <span
+                    className="dot1"
+                    onClick={() => currentTableauSlide(3)}
+                  ></span>
+                </div>
+              </div>
+
               <section className="post-description">
                 <p>
                   <span className="transparent-text">
-                    Tableau Dashboards for projects on COVID 19 and Toronto
-                    Airbnbs
+                    Tableau Dashboards for projects
                   </span>
                 </p>
               </section>
@@ -189,31 +302,88 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>View Project</button>
+                <button className="view-project-button">View Project</button>
               </a>
             </section>
 
             <section className="post">
               <section className="post-header">
-                <h2>Nashville Housing</h2>
+                <h2>Yarnforge Pattern Generator</h2>
               </section>
-              <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="image-post">
-                  <img
-                    src={require("./images/nashville1.jpg")}
-                    alt="BCOSC card"
-                  />
+              <div className="image-post">
+                {/* project card image*/}
+                <div className="myYarnForgeSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusYarnforgeSlides(1)}
+                    aria-label="Next YarnForge Slide"
+                  >
+                    <img
+                      src={require("./images/yarnforge1.png")}
+                      alt="YarnForge Website Page 1"
+                    />
+                  </button>
                 </div>
-              </a>
+                <div className="myYarnForgeSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusYarnforgeSlides(1)}
+                    aria-label="Next YarnForge Slide"
+                  >
+                    <img
+                      src={require("./images/yarnforge2.png")}
+                      alt="YarnForge Website Page 2"
+                    />
+                  </button>
+                </div>
+                <div className="myYarnForgeSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusYarnforgeSlides(1)}
+                    aria-label="Next YarnForge Slide"
+                  >
+                    <img
+                      src={require("./images/yarnforge3.png")}
+                      alt="YarnForge Website Page 3"
+                    />
+                  </button>
+                </div>
+                <div className="myYarnForgeSlides fade">
+                  <button
+                    className="image-button"
+                    onClick={() => plusYarnforgeSlides(1)}
+                    aria-label="Next YarnForge Slide"
+                  >
+                    <img
+                      src={require("./images/yarnforge4.png")}
+                      alt="YarnForge Website Page 4"
+                    />
+                  </button>
+                </div>
+                <div className="dots-container-small">
+                  <span
+                    className="dot2"
+                    onClick={() => currentYarnforgeSlide(1)}
+                  ></span>
+                  <span
+                    className="dot2"
+                    onClick={() => currentYarnforgeSlide(2)}
+                  ></span>
+                  <span
+                    className="dot2"
+                    onClick={() => currentYarnforgeSlide(3)}
+                  ></span>
+                  <span
+                    className="dot2"
+                    onClick={() => currentYarnforgeSlide(4)}
+                  ></span>
+                </div>
+              </div>
               <section className="post-description">
                 <p>
                   <span className="transparent-text">
-                    Transforming raw housing data in SQL Server to make it more
-                    usable for analysis
+                    React web app with a Node/Express.js backend that generates
+                    and saves knitting patterns to an SQLite db.
                   </span>
                 </p>
               </section>
@@ -222,7 +392,7 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>View Project</button>
+                <button className="view-project-button">View Project</button>
               </a>
             </section>
           </div>
@@ -243,7 +413,10 @@ function Home() {
                 rel="noopener noreferrer"
               >
                 <div className="image-post">
-                  <img src={require("./images/movies.png")} alt="BCOSC card" />
+                  <img
+                    src={require("./images/movies.png")}
+                    alt="Movie correlation project"
+                  />
                 </div>
               </a>
               <section className="post-description">
@@ -259,71 +432,79 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>View Project</button>
+                <button className="view-project-button">View Project</button>
+              </a>
+            </section>
+            <section className="post">
+              <section className="post-header">
+                <h2>Nashville Housing</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img
+                    src={require("./images/nashville1.jpg")}
+                    alt="nashville project"
+                  />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Transforming raw housing data in SQL Server to make it more
+                    usable for analysis
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="view-project-button">View Project</button>
+              </a>
+            </section>
+            <section className="post">
+              <section className="post-header">
+                <h2>Covid 19 Data Exploration</h2>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-post">
+                  <img
+                    src={require("./images/covid.jpg")}
+                    alt="covid project"
+                  />
+                </div>
+              </a>
+              <section className="post-description">
+                <p>
+                  <span className="transparent-text">
+                    Exploring global COVID-19 data with SQL Server: infection,
+                    death rates, and vaccination progress.
+                  </span>
+                </p>
+              </section>
+              <a
+                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Covid-Project1/covid.sql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="view-project-button">View Project</button>
               </a>
             </section>
           </div>
         </div>
       </FadeInSection>
-      <section id="about-me-title">
-        <h1>A little bit more about me</h1>
-      </section>
-      <div className="about-me-container">
-        {/* about me section container*/}
-        <FadeInSection>
-          <section id="about-me-card">
-            {/* about me individual card container*/}
-            <div className="about-picture-container">
-              {/* about me image container*/}
-              <img
-                src={require("./images/algoma-winter-cropped.png")}
-                alt="BCOSC card"
-              />
-            </div>
-            {/* about me text*/}
-            <h2>Bachelor of Computer Science</h2>
-            <p>
-              I studied computer science at Algoma University and graduated in
-              October 2024.
-            </p>
-          </section>
-        </FadeInSection>
-        <FadeInSection>
-          <section id="about-me-card">
-            {/* about me individual card container*/}
-            <div className="about-picture-container">
-              {/* about me image container*/}
-              <img
-                src={require("./images/sioc-fractal.png")}
-                alt="Comp chem card"
-              />
-            </div>
-            {/* about me text*/}
-            <h2>Computational Chemistry</h2>
-            <p>
-              I've previously worked in computational chemistry as an
-              undergraduate researcher at UTA where I wrote scripts with LAMMPS
-              code to run molecular dynamic simulations.
-            </p>
-          </section>
-        </FadeInSection>
-        <FadeInSection>
-          <section id="about-me-card">
-            {/* about me individual card container*/}
-            <div className="about-picture-container">
-              {/* about me image container*/}
-              <img src={require("./images/yarn.jpg")} alt="Fiber artist card" />
-            </div>
-            {/* about me text*/}
-            <h2>Fiber artist</h2>
-            <p>
-              I'm also an avid knitter and crocheter! I love making warm
-              sweaters for the long winters and small amigurumi softies for
-              gifts.
-            </p>
-          </section>
-        </FadeInSection>
-      </div>
+      {/*
+      <Misc />
+      */}
     </div>
   );
 }
