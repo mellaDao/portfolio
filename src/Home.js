@@ -388,7 +388,7 @@ function Home() {
                 </p>
               </section>
               <a
-                href="https://github.com/mellaDao/PortfolioProjects/blob/main/Nashville-Project3/nashville.sql"
+                href="https://github.com/mellaDao/Yarnforge"
                 target="_blank"
                 rel="noopener noreferrer"
               >
