@@ -224,11 +224,17 @@ function Home() {
                 <p>
                   <span className="transparent-text">
                     Web scraping project that summarizes Ravelry.com reviews and
-                    overall sentiment on a knitting pattern.
+                    overall sentiment on a knitting pattern. (In progress)
                   </span>
                 </p>
               </section>
-              <button className="view-project-button">In progress</button>
+              <a
+                href="https://github.com/mellaDao/Ravelry_Webscraper/blob/main/ravelry.ipynb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="view-project-button">View Project</button>
+              </a>
             </section>
             <section className="post">
               <section className="post-header">
